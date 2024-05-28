@@ -1,0 +1,39 @@
+---
+import ArrowSmallRight from '../../icons/arrow-small-right.astro'
+import Button from '../UI/Button.astro'
+---
+
+<article class='flex flex-col justify-center gap-y-10 pl-16'>
+  <h1 class='text-main-title font-bold text-pretty max-w-[456px]'>
+    <span class='text-gradient-to-left'>Dive</span>
+    <span class='text-neutral'>into the Depths of</span>
+    <span class='text-gradient-to-right'>Virtual Reality</span>
+  </h1>
+  <p class='text-paragraph text-pretty text-neutral max-w-[70%] max-h-[72px]'>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore nisl tincidunt eget. Lectus mauris
+    eros in vitae .
+  </p>
+  <div class='flex items-center'>
+    <Button width='214px' height='48px'> let's get in touch </Button>
+    <ArrowSmallRight />
+  </div>
+</article>
+<style>
+  article {
+    background-image: url('../../assets/hero/info-bg.png');
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: 13.3em;
+  }
+  .text-gradient-to-left {
+    background: var(--gradient-color-left);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .text-gradient-to-right {
+    background: var(--gradient-color-right);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>

@@ -1,0 +1,13 @@
+---
+import { Image } from 'astro:assets'
+import image from '@/assets/about/about-image.png'
+---
+
+<picture>
+  <Image
+    src={image}
+    alt='Image of a person using our product'
+    width='450'
+    height='500'
+  />
+</picture>

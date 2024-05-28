@@ -1,0 +1,9 @@
+---
+const { width, height } = Astro.props
+---
+
+<button
+  class={`uppercase bg-gradient-right text-small rounded-3xl font-bold w-[${width}] h-[${height}]`}
+>
+  <slot />
+</button>

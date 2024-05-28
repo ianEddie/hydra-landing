@@ -1,0 +1,34 @@
+---
+import { CONTACT_INFO } from '@/constants/contact-info.astro'
+---
+
+<section class='px-16'>
+  <article class='flex justify-around rounded-full text-neutral'>
+    {
+      CONTACT_INFO.map((item) => (
+        <div
+          class={`flex items-center gap-x-4 py-14 px-10 relative ${item.style}`}
+        >
+          <item.icon class='size-10 text-secondary' />
+          <div>
+            <h2 class='font-bold text-[1.4rem]'>{item.title}</h2>
+            <h3 class='text-[0.750rem]'>{item.subtitle}</h3>
+          </div>
+        </div>
+      ))
+    }
+  </article>
+</section>
+<style>
+  article {
+    background: radial-gradient(#3a3456, #211e2e);
+  }
+  .border-custom::after {
+    content: '';
+    position: absolute;
+    border-inline: 1px #6c757d solid;
+    right: 0;
+    left: 0;
+    height: 60%;
+  }
+</style>
