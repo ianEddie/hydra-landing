@@ -1,0 +1,18 @@
+---
+import { Image } from 'astro:assets'
+import image from '@/assets/tech/tech-image.png'
+---
+
+<article class='relative flex justify-center items-center h-[300px]'>
+  <h2 class='uppercase text-neutral text-subtitle flex flex-col text-center'>
+    <span class='font-bold'>technologies & hardware</span>
+    <span class='font-light'>used by hydra vr.</span>
+  </h2>
+  <Image
+    src={image}
+    width={image.width}
+    height={image.height}
+    alt='Image of a person using our product'
+    class='absolute top-0 -z-10'
+  />
+</article>

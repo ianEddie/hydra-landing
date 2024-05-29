@@ -1,0 +1,8 @@
+---
+import { PROCESS_INFO } from '@/constants/process-info'
+import ProcessItem from './ProcessItem.astro'
+---
+
+<article class='flex justify-around'>
+  {PROCESS_INFO.map((item) => <ProcessItem {...item} />)}
+</article>

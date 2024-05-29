@@ -1,12 +1,14 @@
 ---
 import ArrowBigRight from '@/icons/arrow-big-right.astro'
+
+const { title, subtitle } = Astro.props
 ---
 
 <article class='grid grid-cols-2 text-neutral'>
   <div class='flex flex-col uppercase text-subtitle'>
-    <h2 class='flex flex-col font-bold'>introduction</h2>
+    <h2 class='flex flex-col font-bold'>{title}</h2>
     <span class='flex font-light items-center gap-x-3'>
-      to hydra vr
+      {subtitle}
       <ArrowBigRight />
     </span>
   </div>

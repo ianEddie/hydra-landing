@@ -1,13 +1,20 @@
 ---
-import AboutHeader from './AboutHeader.astro'
+import HeaderSection from '../UI/HeaderSection.astro'
 import AboutImage from './AboutImage.astro'
 import AboutInfo from './AboutInfo.astro'
 ---
 
 <section class='px-16 mt-24'>
-  <AboutHeader />
+  <HeaderSection title='introduction' subtitle='to hydra vr' />
   <div class='mt-20 grid grid-cols-2'>
     <AboutImage />
     <AboutInfo />
   </div>
 </section>
+<style>
+  div {
+    background-image: url('../../assets/about/about-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>

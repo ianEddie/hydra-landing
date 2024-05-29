@@ -1,0 +1,12 @@
+---
+import HeaderSection from '../UI/HeaderSection.astro'
+import { SERVICES_INFO } from '@/constants/services-info.astro'
+import ServicesCard from './ServicesCard.astro'
+---
+
+<section class='px-16 py-24 flex flex-col'>
+  <HeaderSection title='why build' subtitle='with hydra?' />
+  <div class='flex mt-24 gap-x-3'>
+    {SERVICES_INFO.map((item) => <ServicesCard {...item} />)}
+  </div>
+</section>

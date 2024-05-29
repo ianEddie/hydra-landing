@@ -1,0 +1,32 @@
+---
+import { Image } from 'astro:assets'
+import Button from '../UI/Button.astro'
+
+const { img, title } = Astro.props
+---
+
+<article
+  class='flex flex-col justify-center items-center rounded-[2em] py-10 gap-y-7 text-neutral'
+>
+  <Image
+    src={img}
+    alt='image of person using our product'
+    width={img.width}
+    height={img.height}
+  />
+  <h2
+    class='font-bold uppercase text-[1.3rem] underline decoration-1 underline-offset-[20px] decoration-secondary'
+  >
+    {title}
+  </h2>
+  <p class='text-[0.720rem] px-7 mt-2'>
+    Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor
+    rhoncus libero justo laoreet sit amet vitae.
+  </p>
+  <Button height='48px' width='30px'> try it now </Button>
+</article>
+<style>
+  article {
+    background: radial-gradient(#433d60, #211e2e);
+  }
+</style>

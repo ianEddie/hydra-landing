@@ -1,0 +1,12 @@
+---
+import { SPONSORS } from '@/constants/sponsors-tech-info.astro'
+import { Image } from 'astro:assets'
+---
+
+<article class='flex justify-around items-center'>
+  {
+    SPONSORS.map(({ img, alt }) => (
+      <Image src={img} alt={`Logo of ${alt}`} width='150' height='150' />
+    ))
+  }
+</article>
