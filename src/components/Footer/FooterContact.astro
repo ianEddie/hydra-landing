@@ -1,0 +1,18 @@
+---
+import { FOOTER_ICONS } from '@/constants/footer-icons.astro'
+import Button from '../UI/Button.astro'
+---
+
+<div class='flex flex-col items-start justify-between pl-[3em]'>
+  <h2 class='text-neutral font-bold uppercase'>socialize with hydra</h2>
+  <ul class='flex justify-around flex-wrap w-full'>
+    {
+      FOOTER_ICONS.map((item) => (
+        <div class='bg-secondary rounded-full p-1'>
+          <item.icon class='size-5 text-[var(--base-color)]' />
+        </div>
+      ))
+    }
+  </ul>
+  <Button>build your world</Button>
+</div>

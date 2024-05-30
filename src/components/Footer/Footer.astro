@@ -1,0 +1,20 @@
+---
+import { Image } from 'astro:assets'
+import logo from '@/assets/footer/footer-logo.png'
+import FooterNav from './FooterNav.astro'
+import FooterMenuList from './FooterMenuList.astro'
+import FooterContact from './FooterContact.astro'
+---
+
+<footer class='px-16 py-20 grid grid-cols-4'>
+  <!-- Logo -->
+  <picture class="">
+    <Image src={logo} alt='Logo of Hydra' width='160' height='100' />
+  </picture>
+  <!-- Menu 1 -->
+  <FooterNav />
+  <!-- Menu 2 -->
+  <FooterMenuList />
+  <!-- Contact -->
+  <FooterContact />
+</footer>

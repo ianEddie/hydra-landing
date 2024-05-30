@@ -1,3 +1,7 @@
+---
+import Button from '../UI/Button.astro'
+---
+
 <form class='mt-5 w-[90%] grid grid-cols-2 gap-5'>
   <input type='text' placeholder='First Name' />
   <input type='text' placeholder='Last Name' />
@@ -8,11 +12,14 @@
     name='message'
     id='message'
     placeholder='Tell us something...'
-    class='col-span-2 min-h-[200px] bg-transparent border rounded-3xl p-5'
+    class='col-span-2 min-h-[200px] bg-transparent border rounded-3xl p-5 placeholder:text-neutral'
   ></textarea>
+  <div class='col-span-2 flex justify-center mt-5'>
+    <Button>send to hydra</Button>
+  </div>
 </form>
 <style>
   input {
-    @apply bg-transparent rounded-full border pl-5 py-4;
+    @apply bg-transparent rounded-full border pl-5 py-4 placeholder:text-neutral;
   }
 </style>

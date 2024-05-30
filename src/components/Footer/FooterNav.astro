@@ -1,0 +1,16 @@
+---
+import { FOOTER_NAVIGATION } from '@/constants/footer-navigation'
+import ColumnSeparator from '@/icons/column-separator.astro'
+---
+
+<nav class='flex flex-col pl-[6em] gap-y-2 relative'>
+  <ColumnSeparator class='absolute h-full left-0' />
+  {
+    FOOTER_NAVIGATION.map(({ value, href }) => (
+      <a href={href} class='text-neutral font-bold uppercase'>
+        {value}
+      </a>
+    ))
+  }
+  <ColumnSeparator class='absolute h-full right-0' />
+</nav>
