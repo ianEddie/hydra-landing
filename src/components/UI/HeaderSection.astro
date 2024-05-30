@@ -4,15 +4,15 @@ import ArrowBigRight from '@/icons/arrow-big-right.astro'
 const { title, subtitle } = Astro.props
 ---
 
-<article class='grid grid-cols-2 text-neutral'>
+<article class='grid sm:grid-cols-2 text-neutral'>
   <div class='flex flex-col uppercase text-subtitle'>
     <h2 class='flex flex-col font-bold'>{title}</h2>
-    <span class='flex font-light items-center gap-x-3'>
+    <span class='flex font-light items-center gap-x-3 sm:w-auto w-full'>
       {subtitle}
       <ArrowBigRight />
     </span>
   </div>
-  <p class='text-paragraph text-pretty'>
+  <p class='text-paragraph text-pretty sm:flex hidden'>
     Vitae sapien pellentesque habitant morbi tristique senectus et netus et.
     Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris
     commodo quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet

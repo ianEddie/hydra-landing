@@ -1,18 +1,18 @@
 ---
 import { Image } from 'astro:assets'
 import image from '@/assets/hero/image.png'
-
 ---
 
-<article class='flex items-center justify-end pr-16 relative'>
+<article
+  class='sm:flex hidden items-center sm:justify-end justify-center sm:pr-16 relative'
+>
   <Image
     src={image}
     alt='image of a girl'
     width='490'
     height='426'
-    class='aspect-auto z-10'
+    class='aspect-auto z-10 sm:h-auto sm:w-auto w-[80%]'
   />
-
 </article>
 <style>
   article {

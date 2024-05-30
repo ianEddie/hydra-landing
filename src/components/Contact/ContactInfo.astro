@@ -2,8 +2,10 @@
 import { CONTACT_INFO } from '@/constants/contact-info.astro'
 ---
 
-<section class='px-16'>
-  <article class='flex justify-around rounded-full text-neutral'>
+<section class='sm:px-16 px-5'>
+  <article
+    class='flex sm:flex-row flex-col justify-around sm:rounded-full rounded-3xl text-neutral'
+  >
     {
       CONTACT_INFO.map((item) => (
         <div

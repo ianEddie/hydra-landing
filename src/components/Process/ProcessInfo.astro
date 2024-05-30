@@ -3,6 +3,6 @@ import { PROCESS_INFO } from '@/constants/process-info'
 import ProcessItem from './ProcessItem.astro'
 ---
 
-<article class='flex justify-around'>
+<article class='sm:flex sm:justify-around grid grid-cols-2 gap-x-5 gap-y-10'>
   {PROCESS_INFO.map((item) => <ProcessItem {...item} />)}
 </article>

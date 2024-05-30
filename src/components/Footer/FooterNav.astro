@@ -3,7 +3,7 @@ import { FOOTER_NAVIGATION } from '@/constants/footer-navigation'
 import ColumnSeparator from '@/icons/column-separator.astro'
 ---
 
-<nav class='flex flex-col pl-[6em] gap-y-2 relative'>
+<nav class='sm:flex hidden flex-col pl-[6em] gap-y-2 relative'>
   <ColumnSeparator class='absolute h-full left-0' />
   {
     FOOTER_NAVIGATION.map(({ value, href }) => (
