@@ -1,11 +1,110 @@
 ---
 import HeaderButtons from './HeaderButtons.astro'
 import HeaderLogo from './HeaderLogo.astro'
-import HeaderNav from './HeaderNav.astro'
+import { HEADER_NAVIGATION } from '@/constants/header-navigation'
 ---
 
-<!-- <header class='fixed z-30 w-full grid grid-cols-3 px-16 py-2'>
+<header id='header'>
+  <!-- Logo -->
   <HeaderLogo />
-  <HeaderNav />
+  <!-- Toggle Action -->
+  <label for='menu'></label>
+  <input type='checkbox' id='menu' />
+  <!-- nav -->
+  <nav>
+    <a href='#hero' class='sm:hidden flex'>Home</a>
+    {HEADER_NAVIGATION.map(({ href, value }) => <a href={href}>{value}</a>)}
+    <a href='#footer' class='sm:hidden flex'>Contact us</a>
+    <a href='#contact' class='sm:hidden flex'>Join hydra</a>
+  </nav>
   <HeaderButtons />
-</header> -->
+  <!-- Toggle Button  -->
+  <div>
+    <button>.</button>
+  </div>
+</header>
+<style>
+  /* Desktop */
+  header {
+    animation: header linear both;
+    animation-timeline: scroll(root);
+    animation-range: entry 1% cover 30%;
+    @apply sm:grid sm:grid-cols-3 flex justify-between items-center lg:px-10 py-[5px] fixed z-40 w-full;
+  }
+  nav {
+    @apply flex items-center justify-around text-[0.750rem];
+  }
+  a {
+    @apply text-neutral uppercase font-bold px-3 py-[6px] rounded-2xl transition-all duration-300;
+  }
+  a:hover {
+    @apply bg-secondary text-[#343045] shadow-md shadow-stone-950/50;
+  }
+  label,
+  input,
+  div {
+    @apply hidden;
+  }
+  @keyframes header {
+    from {
+      background-color: transparent;
+    }
+    to {
+      backdrop-filter: blur(15px);
+      background-color: var(--base-color);
+      padding-block: 10px;
+      box-shadow: 0px 5px 30px 1px rgba(167, 139, 250, 0.3);
+    }
+  }
+  /* Phone */
+  @media screen and (max-width: 600px) {
+    header {
+      @apply flex justify-between pl-2;
+    }
+    div {
+      @apply flex justify-center items-center pr-2;
+    }
+    button {
+      @apply w-10 z-30 transition-all duration-300 text-transparent h-full;
+    }
+    #menu:not(:checked) ~ div > button {
+      background-image: url('https://i.postimg.cc/Dw1MBg4N/menu.webp');
+      background-size: 80%;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+    #menu:checked ~ div > button {
+      background-image: url('https://i.postimg.cc/FKmnqLjH/close.webp');
+      background-size: 80%;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+    label {
+      @apply flex w-10 h-full absolute z-40 top-0 right-2 cursor-pointer;
+    }
+    nav {
+      clip-path: circle(0 at center);
+      transition: clip-path 0.8s ease-in-out;
+      @apply bg-base absolute top-0 right-0 w-full h-screen flex flex-col items-center justify-center gap-y-10 z-30;
+    }
+    button {
+      @apply flex;
+    }
+    input:checked + nav {
+      clip-path: circle(100% at center);
+    }
+  }
+</style>
+<script>
+  // Obtener referencia a los enlaces dentro del menú
+  const enlacesMenu = document.querySelectorAll('nav a')
+
+  // Agregar event listener a cada enlace
+  enlacesMenu.forEach((enlace) => {
+    enlace.addEventListener('click', () => {
+      // Cerrar el menú al hacer clic en un enlace
+      const checkboxMenu = document.getElementById('menu') as HTMLInputElement
+      checkboxMenu.checked = false
+    })
+  })
+</script>

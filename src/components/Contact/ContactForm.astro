@@ -3,10 +3,18 @@ import Button from '../UI/Button.astro'
 ---
 
 <form class='mt-5 w-[90%] grid grid-cols-2 gap-5'>
-  <input type='text' placeholder='First Name' />
-  <input type='text' placeholder='Last Name' />
-  <input type='email' placeholder='E-mail' />
-  <input type='number' placeholder='Phone Number' />
+  <input
+    type='text'
+    placeholder='First Name'
+    class='sm:col-span-1 col-span-2'
+  />
+  <input type='text' placeholder='Last Name' class='sm:col-span-1 col-span-2' />
+  <input type='email' placeholder='E-mail' class='sm:col-span-1 col-span-2' />
+  <input
+    type='number'
+    placeholder='Phone Number'
+    class='sm:col-span-1 col-span-2'
+  />
   <input type='text' placeholder='Subject' class='col-span-2' />
   <textarea
     name='message'
@@ -20,6 +28,6 @@ import Button from '../UI/Button.astro'
 </form>
 <style>
   input {
-    @apply bg-transparent rounded-full border pl-5 py-4 placeholder:text-neutral sm:col-span-1 col-span-2;
+    @apply bg-transparent rounded-full border pl-5 py-4 placeholder:text-neutral;
   }
 </style>

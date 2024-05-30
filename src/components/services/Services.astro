@@ -4,9 +4,9 @@ import { SERVICES_INFO } from '@/constants/services-info.astro'
 import ServicesCard from './ServicesCard.astro'
 ---
 
-<section class='sm:px-16 px-10 sm:py-24 py-16 flex flex-col'>
+<section id='services' class='sm:px-16 px-10 sm:py-24 py-16 flex flex-col'>
   <HeaderSection title='why build' subtitle='with hydra?' />
-  <div class='flex flex-wrap sm:mt-24 mt-10 gap-x-3 gap-y-5'>
+  <div class='grid sm:grid-cols-4 sm:mt-24 mt-10 gap-x-3 gap-y-5'>
     {SERVICES_INFO.map((item) => <ServicesCard {...item} />)}
   </div>
 </section>

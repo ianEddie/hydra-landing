@@ -13,6 +13,6 @@ export const HEADER_NAVIGATION = [
   },
   {
     value: 'how to',
-    href: '#jj'
+    href: '#process'
   }
 ]

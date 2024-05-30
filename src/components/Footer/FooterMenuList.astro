@@ -4,7 +4,7 @@ import ColumnSeparator from '@/icons/column-separator.astro'
 const MENU = ['F.A.Q', 'sitemap', 'conditions', 'licenses']
 ---
 
-<ul class='sm:flex hidden flex-col pl-[6em] gap-y-2 relative'>
+<ul class='sm:flex hidden flex-col h-full pl-[6em] gap-y-2 relative'>
   {MENU.map((item) => <li class='uppercase font-bold text-neutral'>{item}</li>)}
   <ColumnSeparator class='absolute h-full right-0' />
 </ul>
