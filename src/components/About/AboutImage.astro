@@ -1,13 +1,13 @@
 ---
 import { Image } from 'astro:assets'
-import image from '@/assets/about/about-image.png'
+import image from '@/assets/about/about-image.webp'
 ---
 
 <picture>
   <Image
     src={image}
     alt='Image of a person using our product'
-    width='450'
-    height='500'
+    width={image.width}
+    height={image.height}
   />
 </picture>

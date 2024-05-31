@@ -10,8 +10,8 @@ import { Image } from 'astro:assets'
         <Image
           src={img}
           alt={`Logo of ${alt}`}
-          width='150'
-          height='150'
+          width={img.width}
+          height={img.height}
           class='sm:w-auto w-[120px]'
         />
       </picture>
